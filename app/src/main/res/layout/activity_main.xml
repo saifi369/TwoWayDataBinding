@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="com.example.twowaydatabinding.model.Gender" />
         <variable
             name="handler"
             type="com.example.twowaydatabinding.MainActivity" />
@@ -25,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:hint="Enter email address..."
+            android:text="@={viewModel.user.email}"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:hint="Enter username..."
+            android:text="@={viewModel.user.username}"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +65,7 @@
                 android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checkedButton="@{viewModel.user.gender == Gender.MALE ? @id/rb_male : @id/rb_female}"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -105,6 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
+                android:selectedItemPosition="@{viewModel.user.city.ordinal()}"
                 android:entries="@array/cities" />
         </LinearLayout>
 

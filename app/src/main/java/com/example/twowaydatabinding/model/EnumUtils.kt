@@ -1,13 +1,13 @@
 package com.example.twowaydatabinding.model
 
 enum class Gender {
-    MALE,
-    FEMALE
+    MALE,       //0
+    FEMALE      //1
 }
 
 enum class Cities {
-    LAHORE,
-    KARACHI,
-    ISLAMABAD,
-    RAWALPINDI
+    LAHORE,     //0
+    KARACHI,    //1
+    ISLAMABAD,  //2
+    RAWALPINDI  //3
 }

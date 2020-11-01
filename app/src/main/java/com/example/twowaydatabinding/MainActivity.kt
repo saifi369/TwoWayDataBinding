@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         binding.handler = this
+        binding.viewModel = viewModel
 
     }
 
@@ -32,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         use validation when developing production application
         */
 
-        val email = binding.etEmail.text.toString()
-        val username = binding.etUsername.text.toString()
+//        val email = binding.etEmail.text.toString()
+//        val username = binding.etUsername.text.toString()
         val gender =
-            if (binding.rgGender.checkedRadioButtonId == R.id.rb_male) Gender.MALE else Gender.FEMALE
+                if (binding.rgGender.checkedRadioButtonId == R.id.rb_male) Gender.MALE else Gender.FEMALE
 
         var selectedCity: Cities = Cities.ISLAMABAD
 
@@ -44,12 +45,10 @@ class MainActivity : AppCompatActivity() {
                 selectedCity = city
         }
 
-        viewModel.user.email = email
-        viewModel.user.username = username
+//        viewModel.user.email = email
+//        viewModel.user.username = username
         viewModel.user.gender = gender
         viewModel.user.city = selectedCity
-
-        binding.viewModel = viewModel
 
         Toast.makeText(this, "Hello, ${viewModel.user.username}", Toast.LENGTH_SHORT).show()
 

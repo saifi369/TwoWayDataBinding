@@ -1,11 +1,44 @@
 package com.example.twowaydatabinding.model
 
-data class User(
-    var email: String,
-    var username: String,
-    var gender: Gender,
-    var city: Cities
-)  {
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
+
+class User(email: String,
+           username: String,
+           gender: Gender,
+           city: Cities) : BaseObservable() {
+
+    @get:Bindable
+    var email = email
+        set(value) {
+            if (value != email) {
+                field = value
+                notifyChange()
+            }
+        }
+
+    @get:Bindable
+    var username = username
+        set(value) {
+            if (value != username) {
+                field = value
+                notifyChange()
+            }
+        }
+
+    @get:Bindable
+    var gender = gender
+        set(value) {
+            field = value
+            notifyChange()
+        }
+
+    @get:Bindable
+    var city = city
+        set(value) {
+            field = value
+            notifyChange()
+        }
 
     override fun toString(): String {
         return "Email: $email\n" +
@@ -13,5 +46,4 @@ data class User(
                 "Gender: $gender\n" +
                 "City: $city"
     }
-
 }
