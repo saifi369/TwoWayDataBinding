@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.twowaydatabinding.databinding.ActivityMainBinding
-import com.example.twowaydatabinding.model.Cities
-import com.example.twowaydatabinding.model.Gender
 import com.example.twowaydatabinding.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -35,20 +33,20 @@ class MainActivity : AppCompatActivity() {
 
 //        val email = binding.etEmail.text.toString()
 //        val username = binding.etUsername.text.toString()
-        val gender =
-                if (binding.rgGender.checkedRadioButtonId == R.id.rb_male) Gender.MALE else Gender.FEMALE
+//        val gender =
+//                if (binding.rgGender.checkedRadioButtonId == R.id.rb_male) Gender.MALE else Gender.FEMALE
 
-        var selectedCity: Cities = Cities.ISLAMABAD
-
-        for (city in Cities.values()) {
-            if (binding.spinnerCity.selectedItemPosition == city.ordinal)
-                selectedCity = city
-        }
+//        var selectedCity: Cities = Cities.ISLAMABAD
+//
+//        for (city in Cities.values()) {
+//            if (binding.spinnerCity.selectedItemPosition == city.ordinal)
+//                selectedCity = city
+//        }
 
 //        viewModel.user.email = email
 //        viewModel.user.username = username
-        viewModel.user.gender = gender
-        viewModel.user.city = selectedCity
+//        viewModel.user.gender = gender
+//        viewModel.user.city = selectedCity
 
         Toast.makeText(this, "Hello, ${viewModel.user.username}", Toast.LENGTH_SHORT).show()
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.example.twowaydatabinding.model.Gender" />
+        <import type="com.example.twowaydatabinding.model.BindingUtils" />
         <variable
             name="handler"
             type="com.example.twowaydatabinding.MainActivity" />
@@ -65,7 +65,7 @@
                 android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkedButton="@{viewModel.user.gender == Gender.MALE ? @id/rb_male : @id/rb_female}"
+                android:checkedButton="@={BindingUtils.genderToButtonId(viewModel.user.gender)}"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -109,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:selectedItemPosition="@{viewModel.user.city.ordinal()}"
+                android:selectedItemPosition="@={BindingUtils.cityToPosition(viewModel.user.city)}"
                 android:entries="@array/cities" />
         </LinearLayout>
 
