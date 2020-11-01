@@ -1,0 +1,21 @@
+com/example/twowaydatabinding/DataBinderMapperImpl.java
+ com.example.twowaydatabinding.DataBinderMapperImpl
+ com.example.twowaydatabinding.DataBinderMapperImpl$InnerBrLookup
+ com.example.twowaydatabinding.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/twowaydatabinding/DataBindingTriggerClass.java
+ com.example.twowaydatabinding.DataBindingTriggerClass
+com/example/twowaydatabinding/databinding/ActivityMainBindingImpl.java
+ com.example.twowaydatabinding.databinding.ActivityMainBindingImpl
+ com.example.twowaydatabinding.databinding.ActivityMainBindingImpl$OnClickListenerImpl
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/twowaydatabinding/databinding/ActivityMainBinding.java
+ com.example.twowaydatabinding.databinding.ActivityMainBinding
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/twowaydatabinding/BR.java
+ com.example.twowaydatabinding.BR
+com/example/twowaydatabinding/BuildConfig.java
+ com.example.twowaydatabinding.BuildConfig
