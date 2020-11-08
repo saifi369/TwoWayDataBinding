@@ -31,6 +31,13 @@ class MainActivity : AppCompatActivity() {
         use validation when developing production application
         */
 
+        //region User Form Input Code
+
+        /*
+        this code is not required because all of this
+        work is now done by data binding
+         */
+
 //        val email = binding.etEmail.text.toString()
 //        val username = binding.etUsername.text.toString()
 //        val gender =
@@ -47,6 +54,8 @@ class MainActivity : AppCompatActivity() {
 //        viewModel.user.username = username
 //        viewModel.user.gender = gender
 //        viewModel.user.city = selectedCity
+
+        //endregion
 
         Toast.makeText(this, "Hello, ${viewModel.user.username}", Toast.LENGTH_SHORT).show()
 

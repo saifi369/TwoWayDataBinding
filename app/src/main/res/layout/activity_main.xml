@@ -65,7 +65,7 @@
                 android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkedButton="@={BindingUtils.genderToButtonId(viewModel.user.gender)}"
+                gender="@={viewModel.user.gender}"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -109,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:selectedItemPosition="@={BindingUtils.cityToPosition(viewModel.user.city)}"
+                setCity="@={viewModel.user.city}"
                 android:entries="@array/cities" />
         </LinearLayout>
 
