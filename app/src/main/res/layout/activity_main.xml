@@ -104,12 +104,12 @@
                 android:text="City:"
                 android:textSize="18sp" />
 
-            <Spinner
+            <com.example.twowaydatabinding.MySpinner
                 android:id="@+id/spinner_city"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                setCity="@={viewModel.user.city}"
+                city="@={viewModel.user.city}"
                 android:entries="@array/cities" />
         </LinearLayout>
 
